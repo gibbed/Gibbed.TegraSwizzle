@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Company>Gibbed</Company>
+    <Authors>Gibbed</Authors>
+    <Description>https://gib.me/</Description>
+    <Copyright>Copyright © Gibbed 2024</Copyright>
+    <AssemblyVersion>0.4.0.0</AssemblyVersion>
+    <FileVersion>0.4.0.0</FileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(GibbedTegraSwizzle_TargetFrameworksToBuild)' == '' ">
+      <GibbedTegraSwizzle_TargetFrameworksToBuild>$(TargetFrameworksToBuild)</GibbedTegraSwizzle_TargetFrameworksToBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(GibbedTegraSwizzle_TargetFrameworksToBuild)' == '' ">
+    <TargetFrameworks>net45;net472;net48</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(GibbedTegraSwizzle_TargetFrameworksToBuild)' != '' ">
+    <TargetFrameworks>$(GibbedTegraSwizzle_TargetFrameworksToBuild)</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="ThirdParty\tegra_swizzle32.dll" Link="tegra_swizzle32.dll" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="ThirdParty\tegra_swizzle64.dll" Link="tegra_swizzle64.dll" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

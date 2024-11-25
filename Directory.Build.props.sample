@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <GibbedTegraSwizzle_TargetFrameworksToBuild>net5.0</GibbedTegraSwizzle_TargetFrameworksToBuild>
+  </PropertyGroup>
+</Project>
